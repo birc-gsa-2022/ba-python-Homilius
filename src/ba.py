@@ -12,7 +12,7 @@ def border_array(x: str):
     >>> border_array("")
     []
     """
-    if len(x) == 0:
+    if x == '' or x == None:
         return []
         
     ba = [0]
@@ -47,7 +47,7 @@ def strict_border_array(x: str):
     >>> strict_border_array("")
     []
     """
-    if len(x) == 0:
+    if x == '' or x == None:
         return []
 
     ba = border_array(x)

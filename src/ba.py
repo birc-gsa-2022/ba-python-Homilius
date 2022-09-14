@@ -47,6 +47,9 @@ def strict_border_array(x: str):
     >>> strict_border_array("")
     []
     """
+    if len(x) == 0:
+        return []
+
     ba = border_array(x)
     for i in range(len(ba)-1):
         if ba[i+1] > ba[i]:

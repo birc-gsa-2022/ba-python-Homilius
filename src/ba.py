@@ -51,9 +51,7 @@ def strict_border_array(x:str):
         return []
 
     ba = border_array(x)
-    for i in range(len(ba)-1):
-        if ba[i+1] > ba[i]:
-            ba[i]=0
-        if ba[i+1] < ba[i]:
-            ba[i+1] = 0
+    for i in range(len(x)-1):
+        if ba[i] > 0 and x[ba[i]] == x[i+1]:
+            ba[i] = ba[ba[i]-1]
     return ba

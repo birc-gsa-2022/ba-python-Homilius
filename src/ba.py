@@ -1,7 +1,7 @@
 """Module for computing border arrays."""
 
 
-def border_array(x: str):
+def border_array(x:str):
     """
     Construct the border array for x.
 
@@ -28,7 +28,7 @@ def border_array(x: str):
     return ba
 
 
-def strict_border_array(x: str):
+def strict_border_array(x:str):
     """
     Construct the strict border array for x.
 
@@ -54,11 +54,6 @@ def strict_border_array(x: str):
     for i in range(len(ba)-1):
         if ba[i+1] > ba[i]:
             ba[i]=0
+        if ba[i+1] < ba[i]:
+            ba[i+1] = 0
     return ba
-
-
-
-
-
-
-
